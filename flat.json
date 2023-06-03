@@ -6,7 +6,8 @@
   "license": "ISC",
   "defaultTarget": "es6",
   "scripts": {
-    "test": "node dist/es6/test.js"
+    "test": "node dist/es6/test.js",
+    "create-package": "node dist/es6/create-package.js"
   },
   "sources": {
     "main": {
@@ -26,6 +27,12 @@
       "dependencies": {
         "github:FlatLang/Test": "master"
       }
+    },
+    "examples/CreatePackage": {
+      "mainClass": "CreatePackage",
+      "source": "examples",
+      "outFile": "create-package.js",
+      "dependencies": {}
     }
   }
 }
