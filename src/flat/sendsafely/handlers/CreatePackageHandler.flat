@@ -39,7 +39,7 @@ class extends BaseHandler {
         this.request.setPackageUserEmail(this.packageUserEmail)
 
         try {
-            return send(request, CreatePackageResponse())
+            return super.send(request, CreatePackageResponse())
         } catch (Exception e) {
             throw CreatePackageFailedException(e)
         }

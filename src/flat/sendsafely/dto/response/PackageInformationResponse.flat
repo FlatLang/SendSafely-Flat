@@ -119,12 +119,6 @@ class extends BaseResponse {
 	public setLabel(String label) {
 		this.label = label
 	}
-	public isVdr() -> Bool {
-		return isVdr
-	}
-	public setVdr(Bool isVdr) {
-		this.isVdr = isVdr
-	}
 	public getRootDirectoryId() -> String {
 		return rootDirectoryId
 	}

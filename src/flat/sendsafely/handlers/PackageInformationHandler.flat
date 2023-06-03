@@ -38,7 +38,7 @@ class extends BaseHandler {
 
     public send() -> PackageInformationResponse {
         try {
-            return send(request, PackageInformationResponse())
+            return super.send(request, PackageInformationResponse())
         } catch (Exception e) {
             throw PackageInformationFailedException(e)
         }
@@ -58,7 +58,7 @@ class extends BaseHandler {
         info.setState(obj.getState())
         info.setRootDirectoryId(obj.getRootDirectoryId())
         info.setPackageDescriptor(obj.getLabel())
-        info.setIsWorkspace(obj.isVdr())
+        info.setIsWorkspace(obj.isVdr)
         info.setPackageTimestamp(obj.getPackageTimestamp())
         info.setPackageOwner(obj.getPackageSender())
         info.setPackageParentId(obj.getPackageParentId())
@@ -75,6 +75,8 @@ class extends BaseHandler {
 
     public convertFiles(List<FileResponse> responses) -> List<File> {
         let retval = File[]
+
+        if (!responses) return retval
 
         for (resp in responses) {
             retval.add(createFile(resp))

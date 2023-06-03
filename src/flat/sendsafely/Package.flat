@@ -1,6 +1,6 @@
 package flat/sendsafely
 
-class extends BasePackage {
+data class extends BasePackage {
     private var List<Recipient> recipients
     private var List<ContactGroup> contactGroups
 

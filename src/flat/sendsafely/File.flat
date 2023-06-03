@@ -9,7 +9,12 @@ class {
     private var Int parts
     private var Date fileUploaded
 
-    public construct(String fileId, String fileName, Long fileSize, Int parts) {
+    public construct(
+        String fileId,
+        String fileName,
+        Long fileSize,
+        Int parts
+    ) {
         this.fileId = fileId
         this.fileName = fileName
         this.fileSize = fileSize

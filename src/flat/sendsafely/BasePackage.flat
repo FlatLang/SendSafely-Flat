@@ -2,7 +2,7 @@ package flat/sendsafely
 
 import flat/time
 
-class {
+data class {
     private var String packageId
     private var String packageDescriptor
     private var String packageCode
