@@ -6,7 +6,7 @@ class extends BasePackage {
     private var String contactGroupId
     private var String contactGroupName
     private var Bool contactGroupIsOrganizationGroup
-    private var List<ContactGroupMember> users = new ContactGroupMember[0]
+    private var List<ContactGroupMember> users = ContactGroupMember[]
 
     /**
      * @description Get the contact group id
